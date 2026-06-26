@@ -144,7 +144,8 @@ Phase 4: Production & Performance Tuning
 #	Script	What You'll Learn
 09	quantization_benchmark.py	Compressing vectors (Scalar/Binary) to save RAM and measuring recall loss.
 10	snapshots_backup.py	Creating, deleting, and restoring collections from disaster-recovery snapshots.
-🛠️ Advanced Usage & Automation
+
+## 🛠️ Advanced Usage & Automation
 We provide a Makefile to save you keystrokes:
 
 bash
@@ -162,7 +163,7 @@ Switch from local to cloud by changing one line in your .env file. The src/clien
 Jupyter Notebooks
 Use the notebooks/exploration.ipynb to visualize vector distributions using PCA/t-SNE and debug why certain searches return specific results.
 
-🧪 Testing
+## 🧪 Testing
 Maintain code reliability with pytest:
 
 bash
@@ -175,22 +176,4 @@ If collection creation/drop works.
 
 If a basic search returns the correct shape of results.
 
-🤝 Contributing
-Found a bug? Want to add an experiment (e.g., "Multitenancy with Partitioning")?
 
-Fork the repository.
-
-Create your feature branch (git checkout -b feature/amazing-feature).
-
-Commit your changes (git commit -m 'Add some amazing feature').
-
-Push to the branch (git push origin feature/amazing-feature).
-
-Open a Pull Request.
-
-📚 Further Reading
-Official Qdrant Documentation
-
-Qdrant Cloud Free Tier
-
-Sentence-Transformers Docs
