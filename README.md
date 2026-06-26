@@ -90,6 +90,8 @@ qdrant-experiments/
 │   └── test_basic_flow.py
 └── scripts/
     └── cleanup_collections.py   # Nuke all collections to start fresh
+```
+---
 
 ## 🚀 Quick Start (Get Running in 5 Minutes)
 1. Prerequisites
@@ -123,57 +125,43 @@ bash
 python experiments/01_basic_crud.py
 You should see output confirming collection creation, upsert, and search results.
 
+---
+
 ## 🗺️ The Experiment Roadmap
-Follow these scripts in order for maximum learning. Each experiment builds on concepts from the previous one.
 
-Phase 1: Foundations (CRUD & Core Concepts)
-#	Script	What You'll Learn
-01	basic_crud.py	Creating collections, inserting points, fetching by ID, and deleting.
-02	search_and_filter.py	Vector similarity search + basic must filters on payloads.
-03	batch_upsert_scroll.py	Batch processing for 10k+ vectors and pagination using scroll().
-Phase 2: Advanced Querying & Business Logic
-#	Script	What You'll Learn
-04	payload_indexing.py	Speeding up filtered queries using Qdrant's Payload Indexing.
-05	geo_filtering.py	Geospatial queries: finding points within a radius or bounding box.
-06	recommendation_api.py	Using positive/negative examples for "more like this, but less like that".
-Phase 3: Modern AI Patterns (RAG & Hybrid)
-#	Script	What You'll Learn
-07	hybrid_search_bm42.py	Configuring Sparse Vectors and combining BM42 with dense semantic search.
-08	rag_text_embeddings.py	Chunking text, generating embeddings with Sentence-Transformers, and building a mini RAG pipeline.
-Phase 4: Production & Performance Tuning
-#	Script	What You'll Learn
-09	quantization_benchmark.py	Compressing vectors (Scalar/Binary) to save RAM and measuring recall loss.
-10	snapshots_backup.py	Creating, deleting, and restoring collections from disaster-recovery snapshots.
+Follow these scripts **in order** for maximum learning. Each experiment builds on concepts from the previous one.
 
-## 🛠️ Advanced Usage & Automation
-We provide a Makefile to save you keystrokes:
+### Phase 1: Foundations (CRUD & Core Concepts)
 
-bash
-# Run any experiment
-make run-exp EX=08
+| # | Script | What You'll Learn |
+| :---: | :--- | :--- |
+| 01 | `basic_crud.py` | Creating collections, inserting points, fetching by ID, and deleting. |
+| 02 | `search_and_filter.py` | Vector similarity search + basic `must` filters on payloads. |
+| 03 | `batch_upsert_scroll.py` | Batch processing for 10k+ vectors and pagination using `scroll()`. |
 
-# Run the full test suite
-make test
+### Phase 2: Advanced Querying & Business Logic
 
-# Destroy all collections and start fresh
-make reset
-Running in Qdrant Cloud
-Switch from local to cloud by changing one line in your .env file. The src/client_factory.py will automatically handle the API key authentication.
+| # | Script | What You'll Learn |
+| :---: | :--- | :--- |
+| 04 | `payload_indexing.py` | Speeding up filtered queries using Qdrant's Payload Indexing. |
+| 05 | `geo_filtering.py` | Geospatial queries: finding points within a radius or bounding box. |
+| 06 | `recommendation_api.py` | Using positive/negative examples for "more like this, but less like that". |
 
-Jupyter Notebooks
-Use the notebooks/exploration.ipynb to visualize vector distributions using PCA/t-SNE and debug why certain searches return specific results.
+### Phase 3: Modern AI Patterns (RAG & Hybrid)
 
-## 🧪 Testing
-Maintain code reliability with pytest:
+| # | Script | What You'll Learn |
+| :---: | :--- | :--- |
+| 07 | `hybrid_search_bm42.py` | Configuring Sparse Vectors and combining BM42 with dense semantic search. |
+| 08 | `rag_text_embeddings.py` | Chunking text, generating embeddings with Sentence-Transformers, and building a mini RAG pipeline. |
 
-bash
-pytest tests/ -v
-The tests check:
+### Phase 4: Production & Performance Tuning
 
-If the Qdrant client can connect.
+| # | Script | What You'll Learn |
+| :---: | :--- | :--- |
+| 09 | `quantization_benchmark.py` | Compressing vectors (Scalar/Binary) to save RAM and measuring recall loss. |
+| 10 | `snapshots_backup.py` | Creating, deleting, and restoring collections from disaster-recovery snapshots. |
 
-If collection creation/drop works.
 
-If a basic search returns the correct shape of results.
+
 
 
