@@ -48,7 +48,7 @@ graph TD
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style H fill:#bbf,stroke:#333,stroke-width:2px
 
- ##   Experiment Workflow
+Experiment Workflow
 Every experiment follows a strict, repeatable pattern to ensure reliability:
 
 📂 Repository Structure
