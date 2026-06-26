@@ -91,7 +91,7 @@ qdrant-experiments/
 └── scripts/
     └── cleanup_collections.py   # Nuke all collections to start fresh
 
-🚀 Quick Start (Get Running in 5 Minutes)
+## 🚀 Quick Start (Get Running in 5 Minutes)
 1. Prerequisites
 Python 3.9+
 
@@ -101,7 +101,7 @@ Docker Desktop (for local Qdrant)
 
 2. Clone & Setup
 bash
-git clone https://github.com/your-username/qdrant-experiments.git
+git clone https://github.com/dotteduniverse/qdrant-experiments.git
 cd qdrant-experiments
 
 # Create a virtual environment
@@ -118,25 +118,12 @@ cp .env.example .env
 .env.example:
 
 ini
-# Local default (Docker)
-QDRANT_HOST=localhost
-QDRANT_PORT=6333
-QDRANT_URL=http://localhost:6333
-
-# For Qdrant Cloud (uncomment and fill in)
-# QDRANT_URL=https://your-cluster.cloud.qdrant.io
-# QDRANT_API_KEY=your-secret-api-key
-4. Launch Qdrant (Docker)
-bash
-docker-compose up -d
-This runs Qdrant on http://localhost:6333 with persistent storage in ./qdrant_storage.
-
-5. Run Your First Experiment!
+4. Run Your First Experiment!
 bash
 python experiments/01_basic_crud.py
 You should see output confirming collection creation, upsert, and search results.
 
-🗺️ The Experiment Roadmap
+## 🗺️ The Experiment Roadmap
 Follow these scripts in order for maximum learning. Each experiment builds on concepts from the previous one.
 
 Phase 1: Foundations (CRUD & Core Concepts)
